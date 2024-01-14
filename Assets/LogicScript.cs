@@ -7,13 +7,22 @@ using UnityEngine.SceneManagement;
 public class LogicScript : MonoBehaviour
 {
     public int playerScore;
+    public BirdScript bird;
     public Text scoreText;
     public GameObject gameOverScreen;
+    public AudioSource dingSFX;
+    public AudioSource fartSFX;
+
+    void Start()
+    {
+        bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
+    }
 
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd){
         playerScore += scoreToAdd;
         scoreText.text = playerScore.ToString();
+        dingSFX.Play();
     }
 
     public void restartGame(){
@@ -22,6 +31,11 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver(){
         gameOverScreen.SetActive(true);
+        deathSound();
+    }
+
+    public void deathSound(){
+        fartSFX.Play();
     }
     
 }
