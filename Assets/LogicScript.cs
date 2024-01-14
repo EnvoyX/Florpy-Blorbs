@@ -35,4 +35,8 @@ public class LogicScript : MonoBehaviour
     public void deathSound(){
         fartSFX.Play();  
     }
+
+    public void backToMenu(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 }
