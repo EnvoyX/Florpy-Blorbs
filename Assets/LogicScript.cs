@@ -12,7 +12,6 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public AudioSource dingSFX;
     public AudioSource fartSFX;
-
     void Start()
     {
         bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
@@ -31,11 +30,9 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver(){
         gameOverScreen.SetActive(true);
-        deathSound();
+        deathSound();  
     }
-
     public void deathSound(){
-        fartSFX.Play();
+        fartSFX.Play();  
     }
-    
 }
