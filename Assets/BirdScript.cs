@@ -24,6 +24,8 @@ public class BirdScript : MonoBehaviour
         if(transform.position.y > 16 || transform.position.y < -16){
             logic.gameOver();
             birdIsAlive = false;
+            transform. position = new Vector3(0f, 0f, 0f); 
+            Destroy(gameObject);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision) {

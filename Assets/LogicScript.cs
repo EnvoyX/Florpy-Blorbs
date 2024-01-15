@@ -6,37 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
-    public int playerScore;
-    public BirdScript bird;
-    public Text scoreText;
     public GameObject gameOverScreen;
-    public AudioSource dingSFX;
     public AudioSource fartSFX;
     void Start()
     {
-        bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
-    }
 
-    [ContextMenu("Increase Score")]
-    public void addScore(int scoreToAdd){
-        playerScore += scoreToAdd;
-        scoreText.text = playerScore.ToString();
-        dingSFX.Play();
     }
-
     public void restartGame(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  
+        Time.timeScale = 1f;
+        PauseMenu.instancePause.GameIsPaused = false; 
+        Debug.Log("You Restarted!");     
     }
 
     public void gameOver(){
         gameOverScreen.SetActive(true);
         deathSound();  
+        Time.timeScale = 0f;
+        PauseMenu.instancePause.GameIsPaused = true;
+        Debug.Log("You Died!");
     }
     public void deathSound(){
         fartSFX.Play();  
+        Debug.Log("Death Fart sound played!");
     }
 
     public void backToMenu(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Debug.Log("Loading Menu....");
     }
 }

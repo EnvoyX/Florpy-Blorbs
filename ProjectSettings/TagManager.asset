@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Logic
   - Bird
+  - Score Manager
+  - Pause
   layers:
   - Default
   - TransparentFX

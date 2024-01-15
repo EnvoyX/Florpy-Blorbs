@@ -6,11 +6,12 @@ using UnityEngine;
 public class PipeMiddleScript : MonoBehaviour
 {
     public LogicScript logic;
+    public ScoreManager scoreManager;  // cara 1
     public BirdScript bird;
     // Start is called before the first frame update
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        scoreManager = GameObject.FindGameObjectWithTag("Score Manager").GetComponent<ScoreManager>(); //cara 1
         bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
     }
 
@@ -22,7 +23,8 @@ public class PipeMiddleScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.layer == 3 && bird.birdIsAlive == true){
-            logic.addScore(1);
+            // scoreManager.addScore(1);  //cara 1
+            ScoreManager.instance.addScore(1);   //cara 2
         }
         
     }
