@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 210552882}
+  floatingTextPrefab: {fileID: 3754668362312422606, guid: 0c43e433371dfd94d8e3df5f96590995, type: 3}
 --- !u!1 &94642244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,6 +2550,7 @@ MonoBehaviour:
   scoreText: {fileID: 1109073655}
   highscoreText: {fileID: 1453384675}
   bird: {fileID: 0}
+  score: 0
   dingSFX: {fileID: 1720101602}
   coinCollected: {fileID: 1720101605}
 --- !u!4 &1720101604
@@ -2560,7 +2562,7 @@ Transform:
   m_GameObject: {fileID: 1720101601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1677.2418, y: 724.603, z: 1.293997}
+  m_LocalPosition: {x: 10.35, y: 6.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

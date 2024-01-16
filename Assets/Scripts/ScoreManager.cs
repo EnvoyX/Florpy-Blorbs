@@ -45,7 +45,6 @@ public class ScoreManager : MonoBehaviour{
         scoreText.text = score.ToString() + " Points";
         coinCollected.Play();
     }
-
     // Update is called once per frame
     void Update()
     {
