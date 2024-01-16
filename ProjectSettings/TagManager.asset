@@ -9,6 +9,7 @@ TagManager:
   - Score Manager
   - Pause
   - Coin
+  - Pipe
   layers:
   - Default
   - TransparentFX
