@@ -24,7 +24,8 @@ public class PipeMiddleScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.layer == 3 && bird.birdIsAlive == true){
             // scoreManager.addScore(1);  //cara 1
-            ScoreManager.instance.addScore(1);   //cara 2
+            ScoreManager.instance.addScore(5000);   //cara 2
+            Debug.Log("You Scored a point(s)!");
         }
         
     }

@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 66821293}
   - component: {fileID: 66821292}
   - component: {fileID: 66821291}
+  - component: {fileID: 66821296}
   m_Layer: 3
   m_Name: Bird
   m_TagString: Bird
@@ -290,6 +291,18 @@ Transform:
   - {fileID: 1874052929}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &66821296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66821290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583f98de0ff15ea4bb3271972f7c78c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &94642244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +1751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6f846e15c7b404bbe065d79e48bc8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenuUI: {fileID: 731402560}
 --- !u!1 &1154328602
 GameObject:
@@ -2452,6 +2466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1109073655}
   highscoreText: {fileID: 1453384675}
+  bird: {fileID: 0}
   dingSFX: {fileID: 1720101602}
 --- !u!4 &1720101604
 Transform:
@@ -2530,6 +2545,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5400818706933512060, guid: 2f6fbaf4e74d9c34fa272c23bfef7507, type: 3}
   m_PrefabInstance: {fileID: 1874052928}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2044035033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044035035}
+  - component: {fileID: 2044035034}
+  m_Layer: 0
+  m_Name: Coin Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2044035034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044035033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcfea6c51c5baf4b8059c52d596b5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 5872331640352163554, guid: d56766cb3b8bd1c4f97e4cd01ff0a115, type: 3}
+  spawnRate: 3
+  heightOffset: 12
+  XdistanceOffset: 0
+--- !u!4 &2044035035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044035033}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064606535
 GameObject:
   m_ObjectHideFlags: 0
@@ -7633,6 +7696,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 66821295}
   - {fileID: 313520484}
+  - {fileID: 2044035035}
   - {fileID: 1118595837}
   - {fileID: 215002958}
   - {fileID: 944236871}

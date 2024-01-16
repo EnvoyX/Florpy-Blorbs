@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class BirdScript : MonoBehaviour
 {
+    public static BirdScript BirdInstance;
     public Rigidbody2D myRigidbody;
     public float flapStrength;
     public LogicScript logic;
     public bool birdIsAlive = true;
+
+    private void Awake(){
+        BirdInstance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {

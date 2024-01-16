@@ -8,6 +8,7 @@ TagManager:
   - Bird
   - Score Manager
   - Pause
+  - Coin
   layers:
   - Default
   - TransparentFX
